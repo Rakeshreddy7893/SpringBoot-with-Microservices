@@ -1,0 +1,34 @@
+server:
+  port: 9090
+
+
+
+spring:
+  application:
+      name: CircuitBreaker
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    endpoints:
+      health:
+        show-details: true
+    health:
+      circuitbreakers:
+        enabled: true
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransistionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+        
+        

@@ -1,0 +1,12 @@
+spring:
+  application:
+  name: Login-And-Registration-Using-Security
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Root@123
+    url: jdbc:mysql://localhost:3306/Dammy
+  jpa:
+    show-sql: true
+    hibernate:
+         ddl-auto: update

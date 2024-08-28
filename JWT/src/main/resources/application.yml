@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: JWT
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Root@123
+    url: jdbc:mysql://localhost:3306/Dammy
+    username: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update

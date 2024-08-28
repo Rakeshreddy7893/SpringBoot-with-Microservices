@@ -1,0 +1,8 @@
+spring:
+  application:
+      name: greet
+  config:
+    import: optional:configserver:http://localhost:9090
+
+server:
+  port: 9091
